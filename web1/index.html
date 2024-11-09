@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" type = 'text/css' media = 'screen' href="styles/style.css">
+        <script src = 'scripts/data.js'></script>
+    </head>
+    <body>
+        <div class="sve">
+            <div class = "gornji">
+                <div class = "malilogo">
+                    <img src = "images/malilogo.jpg">
+                </div>
+                <div class = "naslov" id = 'naslov'>Odaberite kategoriju</div>
+                <div class = "kosara">
+                    <button id = "kosara"><img src = "images/kosara.jpg"></button>
+                    <button id = "povecalo"><img src = "images/povecalo.jpg"></button>
+                </div>
+            </div>
+            <div class = "kategorije">
+                <ul>
+                    <li><button id ='prazan'></button></li>
+                    <li><button onclick = "displayProducts(0)" id = "Nike Dunk Low">Nike Dunk Low</button></li>
+                    <hr/>
+                    <li><button onclick = "displayProducts(1)" id = "Nike Dunk High">Nike Dunk High</button></li>
+                    <hr/>
+                    <li><button onclick = "displayProducts(2)" id = "Air Jordan 1 High">Air Jordan 1 High</button></li>
+                    <hr/>
+                    <li><button onclick = "displayProducts(3)" id = "Air Jordan 1 Mid">Air Jordan 1 Mid</button></li>
+                    <hr/>
+                    <li><button onclick = "displayProducts(4)" id = "Air Jordan 1 Low">Air Jordan 1 Low</button></li>
+                    <hr/>
+                    <li><button onclick = "displayProducts(5)" id = "Air Jordan 4">Air Jordan 4</button></li>
+                    <hr/>
+                    <li><button onclick = "displayProducts(6)" id = "New Balance 550">New Balance 550</button></li>
+                    <hr/>
+                    <li><button onclick = "displayProducts(7)" id = "Yeezy">Yeezy</button></li>
+                    <hr/>
+                    <li><button onclick = "displayProducts(8)" id = "Air Force 1">Air Force 1</button></li>
+                    <hr/>
+                    <li><button onclick = "displayProducts(9)" id = "Air Max">Air Max</button></li>
+                </ul>
+            </div>
+            <div class = "logo">
+                <img src = "images/logo.jpg">
+                <span class = "tekst">Kickz</span>
+            </div>
+            <div class = "kontakt">
+                <ul>
+                    <li><button id ='prazan'></button></li>
+                    <li><button id = 'Kontakt'>Kontakt</button></li>
+                    <hr/>
+                    <li><button id = 'Newsletter'>Newsletter</button></li>
+                    <hr/>
+                    <li><button id = 'Pretplatise'>Pretplati se</button></li>
+                </ul>
+            </div>
+            <div id = "product-display">
+                <img src="{product.image}" alt="{product.name}">
+            </div>
+            </div>
+            <script src = 'scripts/script.js'></script>
+        </div>
+    </body>
+</html>
