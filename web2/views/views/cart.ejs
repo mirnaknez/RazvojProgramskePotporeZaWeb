@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="styles/cartStyle.css">
+</head>
+<body>
+    <div class = "wrapper">
+        <div class = "naslovnaslika">
+            <img src="images/logo.jpg" alt="">
+        </div>
+        <hr>
+    </div>
+    <div class="kosarica">
+        <div id="cartElement">
+            <ul>
+                <% for (const key of Object.keys(cart)) { %>
+                    <% for (const category of data.categories) { %>
+                        <% for (const product of category.products) { %>
+                            <% if (product.id == key) { %>
+                                <% if (cart[key] != 0) { %>
+                                    <li>
+                                        <p id = "name"><%= product.name %></p>
+                                        <p id = "value"><%= cart[key] %></p>
+                                        <button id="minus" onclick="window.location.href = '/cart/remove/<%= key %>'">-</button>
+                                        <button id="plus" onclick="window.location.href = '/cart/add/<%= key %>'">+</button>
+                                    </li>
+                                <% } %>
+                            <% } %>
+                        <% } %>
+                    <% } %>
+                <% } %>
+            </ul>
+        </div>        
+    </div>
+</body>
+
+</html>

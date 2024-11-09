@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" type = 'text/css' media = 'screen' href="styles/style.css">
+    </head>
+    <body>
+        <div class="sve">
+            <div class = "gornji">
+                <div class = "malilogo">
+                    <img src = "images/malilogo.jpg">
+                </div>
+                <div class = "naslov" id = 'naslov'><%= category.name %></div>
+                <div class = "kosara">
+                    <button id = "kosara" onclick="window.location.href = '/cart'"><img src = "images/kosara.jpg"></button>
+                    <% if (count != 0) { %>
+                        <p class="brojac" id="brojac"><%= count %></p>
+                    <% } %>
+                    <button id = "povecalo"><img src = "images/povecalo.jpg"></button>
+                </div>
+            </div>
+            <div class="kategorije">
+                <ul>
+                    <li><button id ='prazan'></button></li>
+                    <% for(let category of categories) { %>
+                        <li>
+                            <button onclick="window.location.href = '/<%= categories.indexOf(category) %>'"><%= category.name %></button>
+                            <hr/>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+            <div id = "product-display">
+                <ul>
+                    <% for(let product of products) { %>
+                        <li>
+                            <img src="<%= product.image %>" alt="<%= product.name %>">
+                            <p><%= product.name %></p>
+                            <p><%= category.name %></p>
+                            <button onclick="window.location.href = '/add/<%= product.id %>'"><img src = "images/kosara.jpg"></button>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+            <div class = "logo">
+                <img src = "images/logo.jpg">
+                <span class = "tekst">Kickz</span>
+            </div>
+            <div class = "kontakt">
+                <ul>
+                    <li><button id ='prazan'></button></li>
+                    <li><button id = 'Kontakt'>Kontakt</button></li>
+                    <hr/>
+                    <li><button id = 'Newsletter'>Newsletter</button></li>
+                    <hr/>
+                    <li><button id = 'Pretplatise'>Pretplati se</button></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.wrapper {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.naslovnaslika img {
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.kosarica {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#cartElement ul {
+    list-style: none;
+    padding: 0;
+}
+
+#cartElement ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#cartElement ul li p {
+    margin: 0;
+    flex: 1;
+}
+
+#cartElement ul li #name {
+    text-align: left;
+}
+
+#cartElement ul li #value {
+    text-align: center;
+}
+
+#cartElement ul li button {
+    background: lightblue;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    flex: 0.2;
+}
+
+#cartElement ul li #minus {
+    margin-right: 10px;
+}
+
+#cartElement ul li #plus {
+    margin-left: 10px;
+}
